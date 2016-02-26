@@ -10,15 +10,10 @@
         "default_popup":"popup.html"
     },
 
-    "background": {
-        "scripts":["eventPage.js"],
-        "persistent":false
-    },
-
     "content_scripts": [
         {
             "matches":["https://leetcode.com/problemset/*","https://leetcode.com/tag/*"],
-            "js":["leetcode.js","jquery-1.10.2.js"]
+            "js":["jquery-1.10.2.js", "leetcode.js"]
         }
     ],
 

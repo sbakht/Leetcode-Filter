@@ -8,4 +8,16 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 chrome.runtime.sendMessage({action:"show"});
+$("#filterchosen").after('<button id="hidePremium">Hide Premium</button> <button id="showPremium" style="display:none">Show Premium</button>');
 
+    $(".blog-main #hidePremium").on("click", function() {
+        $(".fa-lock").parent().parent().hide();
+        $("#hidePremium").hide();
+        $("#showPremium").show();
+    });
+
+    $(".blog-main #showPremium").on("click", function() {
+        $(".fa-lock").parent().parent().show();
+        $("#showPremium").hide();
+        $("#hidePremium").show();
+    });
