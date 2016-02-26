@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "Leetcode Filter",
+    "description": "Filter out leetcode problems based on difficulty or premium questions",
+    "version":"1.0",
+
+    "page_action": {
+        "default_icon":"icon.png",
+        "default_popup":"popup.html"
+    },
+
+    "background": {
+        "scripts":["eventPage.js"],
+        "persistent":false
+    },
+
+    "content_scripts": [
+        {
+            "matches":["https://leetcode.com/problemset/*","https://leetcode.com/tag/*"],
+            "js":["leetcode.js","jquery-1.10.2.js"]
+        }
+    ],
+
+    "permissions": [
+        "tabs",
+        "https://leetcode.com/*"
+    ]
+}
