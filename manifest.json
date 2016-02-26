@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "Leetcode Filter",
-    "description": "Filter out leetcode problems based on difficulty or premium questions",
+    "description": "Adds button on page to hide leetcode premium questions from list of problems",
     "version":"1.0",
 
     "page_action": {
